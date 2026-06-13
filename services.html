@@ -43,33 +43,126 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="page-hero" id="pageHero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury SUV">
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h1>Our Services</h1>
-            <p>Premium transportation solutions for all your needs</p>
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="breadcrumb-current">Services</span>
+            </nav>
+            <div class="hero-content">
+                <h1 class="hero-title">Our Services</h1>
+                <p class="hero-description">Premium transportation solutions for all your needs. Experience luxury travel with our fleet of high-end vehicles and professional chauffeurs.</p>
+                <div class="hero-buttons">
+                    <a href="#servicesDetail" class="btn btn-primary btn-lg">
+                        <i class="fas fa-car"></i> View All Services
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone-alt"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview" id="servicesOverview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-effect">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Local Travel">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local Travel</h3>
+                    <p>Quick and reliable local cab services within Mumbai city limits.</p>
+                    <a href="#servicesDetail" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass-effect">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outstation Trips">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Outstation Trips</h3>
+                    <p>Comfortable outstation travel to any destination across India.</p>
+                    <a href="#servicesDetail" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass-effect">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rental Packages">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Rental Packages</h3>
+                    <p>Flexible hourly and daily rental packages for your convenience.</p>
+                    <a href="#servicesDetail" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass-effect">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Airport Transfers">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Airport Transfers</h3>
+                    <p>Punctual airport pickup and drop services for hassle-free travel.</p>
+                    <a href="#servicesDetail" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass-effect">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Travel">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Travel</h3>
+                    <p>Premium corporate transportation solutions for businesses.</p>
+                    <a href="#servicesDetail" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services-detail" id="servicesDetail">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Services</h2>
+                <div class="section-divider"></div>
+            </div>
             <div class="services-detail-grid">
                 <!-- Service Card 1 -->
                 <div class="service-detail-card glass-effect">
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Local Cab Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Local Cab Service</h3>
+                        <p>Quick and reliable local cab services within Mumbai city limits. Perfect for daily commuting, shopping trips, or visiting local attractions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Point-to-point pickup</li>
+                            <li><i class="fas fa-check"></i> Hourly packages available</li>
+                            <li><i class="fas fa-check"></i> Knowledgeable local drivers</li>
+                        </ul>
                     </div>
-                    <h3>Local Cab Service</h3>
-                    <p>Quick and reliable local cab services within Mumbai city limits. Perfect for daily commuting, shopping trips, or visiting local attractions. Our drivers know every corner of the city.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Point-to-point pickup</li>
-                        <li><i class="fas fa-check"></i> Hourly packages available</li>
-                        <li><i class="fas fa-check"></i> Knowledgeable local drivers</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 2 -->
@@ -77,16 +170,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outstation Cab Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-road"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3>Outstation Cab Service</h3>
+                        <p>Comfortable outstation travel to any destination across India. Whether it's a weekend getaway or a long-distance journey.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> One-way & round-trip options</li>
+                            <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
+                            <li><i class="fas fa-check"></i> Experienced highway drivers</li>
+                        </ul>
                     </div>
-                    <h3>Outstation Cab Service</h3>
-                    <p>Comfortable outstation travel to any destination across India. Whether it's a weekend getaway or a long-distance journey, we ensure a smooth and safe ride.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> One-way & round-trip options</li>
-                        <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
-                        <li><i class="fas fa-check"></i> Experienced drivers for highways</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 3 -->
@@ -94,16 +189,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rental Cab Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-calendar-check"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Rental Cab Service</h3>
+                        <p>Flexible hourly and daily rental packages for your convenience. Ideal for business meetings, city tours, or extended periods.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 4/8/12 hour packages</li>
+                            <li><i class="fas fa-check"></i> KM included in packages</li>
+                            <li><i class="fas fa-check"></i> Transparent pricing</li>
+                        </ul>
                     </div>
-                    <h3>Rental Cab Service</h3>
-                    <p>Flexible hourly and daily rental packages for your convenience. Ideal for business meetings, city tours, or when you need a car at your disposal for extended periods.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> 4/8/12 hour packages</li>
-                        <li><i class="fas fa-check"></i> KM included in packages</li>
-                        <li><i class="fas fa-check"></i> Transparent pricing</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 4 -->
@@ -111,16 +208,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Airport Pickup & Drop">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-plane"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Airport Pickup & Drop</h3>
+                        <p>Punctual airport pickup and drop services for hassle-free travel. We track your flight to ensure timely pickup.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Flight tracking included</li>
+                            <li><i class="fas fa-check"></i> Meet & greet service</li>
+                            <li><i class="fas fa-check"></i> Luggage assistance</li>
+                        </ul>
                     </div>
-                    <h3>Airport Pickup & Drop</h3>
-                    <p>Punctual airport pickup and drop services for hassle-free travel. We track your flight to ensure timely pickup, whether you're arriving or departing.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Flight tracking included</li>
-                        <li><i class="fas fa-check"></i> Meet & greet service</li>
-                        <li><i class="fas fa-check"></i> Luggage assistance</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 5 -->
@@ -128,16 +227,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Travel">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-building"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Corporate Travel</h3>
+                        <p>Premium corporate transportation solutions for businesses. We handle employee transportation, client pickups, and event logistics.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Monthly billing options</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                            <li><i class="fas fa-check"></i> Priority booking</li>
+                        </ul>
                     </div>
-                    <h3>Corporate Travel</h3>
-                    <p>Premium corporate transportation solutions for businesses. We handle employee transportation, client pickups, and event logistics with professionalism.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Monthly billing options</li>
-                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                        <li><i class="fas fa-check"></i> Priority booking</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 6 -->
@@ -145,16 +246,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bus Booking">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-bus"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3>Bus Booking</h3>
+                        <p>Bus booking services for group travel, events, and special occasions. We arrange comfortable buses for large groups.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Various bus sizes available</li>
+                            <li><i class="fas fa-check"></i> AC & Non-AC options</li>
+                            <li><i class="fas fa-check"></i> Group discounts</li>
+                        </ul>
                     </div>
-                    <h3>Bus Booking</h3>
-                    <p>Bus booking services for group travel, events, and special occasions. We arrange comfortable buses for large groups with professional drivers.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Various bus sizes available</li>
-                        <li><i class="fas fa-check"></i> AC & Non-AC options</li>
-                        <li><i class="fas fa-check"></i> Group discounts</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 7 -->
@@ -162,16 +265,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="House Keeping Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-broom"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3>House Keeping Service</h3>
+                        <p>Professional house keeping services for homes and offices. Our trained staff ensures clean and well-maintained spaces.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Trained professionals</li>
+                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                            <li><i class="fas fa-check"></i> Quality cleaning equipment</li>
+                        </ul>
                     </div>
-                    <h3>House Keeping Service</h3>
-                    <p>Professional house keeping services for homes and offices. Our trained staff ensures clean and well-maintained spaces for your comfort.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Trained professionals</li>
-                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                        <li><i class="fas fa-check"></i> Quality cleaning equipment</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 8 -->
@@ -179,16 +284,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1555662395-7e3a7c6c8b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bouncer Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-user-shield"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Bouncer Service</h3>
+                        <p>Professional bouncer services for events, parties, and security needs. Our trained personnel ensure safety and order.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Trained security personnel</li>
+                            <li><i class="fas fa-check"></i> Event security management</li>
+                            <li><i class="fas fa-check"></i> Crowd control experts</li>
+                        </ul>
                     </div>
-                    <h3>Bouncer Service</h3>
-                    <p>Professional bouncer services for events, parties, and security needs. Our trained personnel ensure safety and order at your venue.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Trained security personnel</li>
-                        <li><i class="fas fa-check"></i> Event security management</li>
-                        <li><i class="fas fa-check"></i> Crowd control experts</li>
-                    </ul>
                 </div>
 
                 <!-- Service Card 9 -->
@@ -196,16 +303,18 @@
                     <div class="service-detail-image">
                         <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Care Taker Service">
                     </div>
-                    <div class="service-detail-icon">
-                        <i class="fas fa-hands-helping"></i>
+                    <div class="service-detail-content">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Care Taker Service</h3>
+                        <p>Professional care taker services for elderly, children, or special needs individuals. Our compassionate staff provides dedicated care.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Trained care professionals</li>
+                            <li><i class="fas fa-check"></i> Background verified staff</li>
+                            <li><i class="fas fa-check"></i> Customized care plans</li>
+                        </ul>
                     </div>
-                    <h3>Care Taker Service</h3>
-                    <p>Professional care taker services for elderly, children, or special needs individuals. Our compassionate staff provides dedicated care and support.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Trained care professionals</li>
-                        <li><i class="fas fa-check"></i> Background verified staff</li>
-                        <li><i class="fas fa-check"></i> Customized care plans</li>
-                    </ul>
                 </div>
             </div>
         </div>

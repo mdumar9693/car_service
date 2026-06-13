@@ -240,19 +240,119 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // Add parallax effect to hero section
+    // Hero Image Slider
     // ============================================
-    const hero = document.getElementById('hero');
+    const sliderTrack = document.querySelector('.slider-track');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dotsContainer = document.getElementById('sliderDots');
     
-    if (hero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.scrollY;
-            const parallaxSpeed = 0.5;
-            
-            if (scrolled < hero.offsetHeight) {
-                hero.style.backgroundPositionY = scrolled * parallaxSpeed + 'px';
-            }
+    if (sliderTrack && slides.length > 0) {
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+        const autoSlideDelay = 5000;
+        
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
         });
+        
+        const dots = document.querySelectorAll('.slider-dot');
+        
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            updateSlider();
+            resetAutoSlide();
+        }
+        
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+        
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, autoSlideDelay);
+        }
+        
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+        
+        function resetAutoSlide() {
+            stopAutoSlide();
+            startAutoSlide();
+        }
+        
+        // Navigation arrows
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+            });
+        }
+        
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        sliderTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoSlide();
+        }, { passive: true });
+        
+        sliderTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoSlide();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+        
+        // Pause on hover
+        const heroSlider = document.querySelector('.hero-slider');
+        if (heroSlider) {
+            heroSlider.addEventListener('mouseenter', stopAutoSlide);
+            heroSlider.addEventListener('mouseleave', startAutoSlide);
+        }
+        
+        // Start auto-slide
+        startAutoSlide();
     }
     
     // ============================================
@@ -297,6 +397,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     if ('ontouchstart' in window) {
         document.body.classList.add('touch-device');
+    }
+    
+    // ============================================
+    // Parallax Effect for Page Hero Sections
+    // ============================================
+    const pageHero = document.querySelector('.page-hero');
+    const heroBackground = document.querySelector('.hero-background');
+    
+    if (pageHero && heroBackground) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroHeight = pageHero.offsetHeight;
+            const heroTop = pageHero.offsetTop;
+            
+            // Only apply parallax when hero is in view
+            if (scrolled < heroHeight + heroTop) {
+                const translateY = scrolled * 0.5;
+                heroBackground.style.transform = `translateY(${translateY}px)`;
+            }
+        });
     }
     
     // ============================================
