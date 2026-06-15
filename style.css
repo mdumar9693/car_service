@@ -2,7 +2,7 @@
    ALL DRIVER CAB SERVICE - Premium CSS Styles
    ============================================ */
 
-/* CSS Variables for Color Palette */
+/* CSS Variables for Color Palette - Dark Theme (Default) */
 :root {
     --bg-color: #0f0f0f;
     --primary-gold: #FFD700;
@@ -11,10 +11,28 @@
     --gray: #bdbdbd;
     --dark-gray: #333333;
     --light-gray: #f5f5f5;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 215, 0, 0.15);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;
+    --navbar-bg: rgba(15, 15, 15, 0.95);
+    --navbar-text: #ffffff;
+    --navbar-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --white: #0f0f0f;
+    --gray: #333333;
+    --dark-gray: #666666;
+    --light-gray: #f5f5f5;
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-text: #0f0f0f;
+    --navbar-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset and Base Styles */
@@ -67,7 +85,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(15, 15, 15, 0.95);
+    background: var(--navbar-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
@@ -78,7 +96,7 @@ body {
 
 .navbar.scrolled {
     padding: 10px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--navbar-shadow);
 }
 
 .navbar .container {
@@ -92,7 +110,7 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: var(--white);
+    color: var(--navbar-text);
     font-size: 1.2rem;
     font-weight: 700;
     transition: var(--transition);
@@ -116,7 +134,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--white);
+    color: var(--navbar-text);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
@@ -213,6 +231,28 @@ body {
     justify-content: center;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-gold);
+    color: var(--bg-color);
+    transform: rotate(180deg);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -223,7 +263,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--white);
+    background: var(--navbar-text);
     transition: var(--transition);
     border-radius: 3px;
 }
@@ -578,8 +618,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75));
     z-index: 1;
+}
+
+[data-theme="light"] .hero-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
 }
 
 .page-hero .container {
@@ -600,10 +644,11 @@ body {
 }
 
 .breadcrumb a {
-    color: var(--gray);
+    color: var(--white);
     text-decoration: none;
     font-size: 0.95rem;
     transition: var(--transition);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .breadcrumb a:hover {
@@ -613,12 +658,14 @@ body {
 .breadcrumb-separator {
     color: var(--primary-gold);
     font-size: 0.75rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .breadcrumb-current {
     color: var(--primary-gold);
     font-size: 0.95rem;
     font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Hero Content */
@@ -635,14 +682,16 @@ body {
     letter-spacing: 2px;
     line-height: 1.2;
     animation: fadeInUp 1s ease;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero-description {
     font-size: 1.2rem;
-    color: var(--gray);
+    color: var(--white);
     margin-bottom: 35px;
     line-height: 1.8;
     animation: fadeInUp 1s ease 0.2s backwards;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero-buttons {
@@ -1666,7 +1715,7 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(15, 15, 15, 0.98);
+        background: var(--navbar-bg);
         backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 30px 20px;
@@ -1799,6 +1848,12 @@ section {
     
     .btn {
         padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
         font-size: 1rem;
     }
     
