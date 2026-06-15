@@ -333,7 +333,7 @@ body {
 .slide-headline {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: rgb(224, 228, 6);
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
@@ -683,7 +683,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: rgb(233, 229, 0);
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -694,7 +694,7 @@ body {
 
 .hero-description {
     font-size: 1.2rem;
-    color: var(--white);
+    color: white;
     margin-bottom: 35px;
     line-height: 1.8;
     animation: fadeInUp 1s ease 0.2s backwards;
